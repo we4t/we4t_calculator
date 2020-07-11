@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>We4t Calculator</title>
+        <style>
+            input {
+            width: 50px;
+            height: 50px;
+            position:relative;
+            top:80px;
+            left:40%;
+            border: solid 1px ;
+            margin-bottom: 10px;
+          }
+          </style>
+          <script>
+            a=0;
+            function clean(){
+              calculator.answer.value = '';
+            }
+            function check(){
+              if(a==1)
+              {
+                    clean();
+                    a=0;
+              }
+            }
+          </script>
+    </head>
+
+    <body style="background: linear-gradient(to right,#00AAFF, #00FF6C);">
+
+        <div id='calc-contain'>
+          <form name="calculator">
+
+            <input type="text" name="answer" style="width:210px;">
+
+            <br>
+            <input type="button" value=" 1 " onclick="check(); calculator.answer.value += '1'; " />
+            <input type="button" value=" 2 " onclick="check(); calculator.answer.value += '2'; " />
+            <input type="button" value=" 3 " onclick="check(); calculator.answer.value += '3'; " />
+            <input type="button" value=" + " onclick="calculator.answer.value += '+'" />
+            <br>
+
+            <input type="button" value=" 4 " onclick="check(); calculator.answer.value += '4'; " />
+            <input type="button" value=" 5 " onclick="check(); calculator.answer.value += '5'; " />
+            <input type="button" value=" 6 " onclick="check(); calculator.answer.value += '6'; " />
+            <input type="button" value=" - " onclick="calculator.answer.value += '-'" />
+            <br>
+
+            <input type="button" value=" 7 " onclick="check(); calculator.answer.value += '7';" />
+            <input type="button" value=" 8 " onclick="check(); calculator.answer.value += '8';" />
+            <input type="button" value=" 9 " onclick="check(); calculator.answer.value += '9';" />
+            <input type="button" value=" x " onclick="calculator.answer.value += '*'" />
+            <br>
+
+            <input type="button" value=" c " onclick="clean()" />
+            <input type="button" value=" 0 " onclick=" check(); calculator.answer.value += '0';" />
+            <input type="button" value=" = " onclick="calculator.answer.value = eval(calculator.answer.value); a=1;" />
+            <input type="button" value=" / " onclick="calculator.answer.value += '/'" />
+            <br>
+
+
+          </form>
+        </div>
+    </body>
+</html>
